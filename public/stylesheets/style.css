@@ -1,0 +1,21 @@
+body html {
+  padding: 0 auto;
+  margin: 0 auto;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+h1{    
+    padding: 10%;
+    background-color: rgb(150, 150, 255);    
+    box-shadow: inset 1px 10px 150px darkblue;
+    display: block;          
+}
+h1::before{
+    content: 'Olá Mundo ';
+}
+h1::after{
+    content: '.';
+}

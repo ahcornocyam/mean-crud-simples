@@ -1,0 +1,1 @@
+var srv =  angular.module('myApp.services', ['ngResource']);
