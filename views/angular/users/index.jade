@@ -1,6 +1,35 @@
-extends ../../layout
-block title
-    title Usuários
-block content
-    h1    do css com jade e node e angular
-
+div(class="fundo")
+div(class="row")
+    div(class="col-md-offset-2 col-md-8")                
+        main( ng-init="load()", class="panel panel-default")
+            header(class="panel panel-warning")
+                div(class="panel-heading")
+                    h1(class="text-center") Listagem de Usuários           
+            table( width="100%", class="table table-hover")
+                thead
+                    tr            
+                        th Nome
+                        th Email
+                        th
+                tbody
+                    tr(ng-repeat="registro in registros")            
+                        td 
+                            a(href="#/edit/{{registro._id}}") 
+                                {{ registro.name}}
+                        td {{ registro.email}}
+                        td(class="text-right")
+                            a(ng-click="delete(registro._id); load()", class="remove btn btn-raised btn-warning")
+                                i(class="material-icons") remove                                   
+                tfoot
+                    tr
+                        td(colspan="3", class="text-center") foram encontrados {{ registros.length }} usuários
+            div(class="text-right")
+                a(href="#/new", class="btn btn-fab btn-success")
+                    i(class="material-icons") add
+                    
+footer(class="panel panel-primary")
+    div(class="panel-heading")
+       div(class="text-center")
+        small desenvolvido por Alexandre Roch
+    div(class="panel-body")
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, quia incidunt. Quia, nostrum nisi voluptatibus deserunt rem minus vitae delectus error, molestias, nemo alias velit saepe blanditiis voluptatum accusamus distinctio.

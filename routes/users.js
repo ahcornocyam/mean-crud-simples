@@ -10,6 +10,7 @@ exports.get =  function (req, res) {
 }
 
 exports.create  = function (req, res) {
+    console.log(req);
     UserModel.create(req, res);
 }
 

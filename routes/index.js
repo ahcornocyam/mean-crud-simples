@@ -1,5 +1,5 @@
 exports.index = function (req, res) {
-    res.render('index', { title: 'School of Net'});
+    res.render('index', { title: 'Crud exemplo de usuários'});
 };
 
 exports.partials =  function (req, res) {

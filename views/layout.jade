@@ -1,7 +1,35 @@
 doctype html
-html(lang="pt-br")
-  head        
+html(lang="pt-br" ng-app="myApp")
+  head
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+    
+            
+    link(href="/libs/css/bootstrap.min.css", rel="stylesheet")
+    link(href="/libs/css/bootstrap-material-design.css", rel="stylesheet")        
+    link(href="/libs/css/ripples.min.css", rel="stylesheet")
+    link(href="/libs/css/sweetalert2.css", rel="stylesheet")
+    
     link(rel='stylesheet', href='/stylesheets/style.css')
-    block title
+    base(href="/")
+    block title    
   body
     block content
+    //dependencias js
+    script(src="/libs/js/angular.min.js")
+    script(src="/libs/js/angular-route.min.js")
+    script(src="/libs/js/angular-resource.min.js")
+    script(src="/libs/js/SweetAlert.min.js")
+    script(src="/libs/js/jquery.min.js")
+    script(src="/libs/js/bootstrap.min.js")
+    script(src="/libs/js/material.min.js")
+    script(src="/libs/js/ripples.min.js")
+    script(src="/libs/js/sweetalert2.min.js")
+    //angular myApp
+    script(src="/javascripts/app.js")
+    script(src="/javascripts/controllers.js")
+    script(src="/javascripts/services.js")
+    //jquery
+    script(src="/javascripts/main.js")
+    
+    

@@ -37,8 +37,7 @@ exports.get = function (req, res) {
 
 exports.create =  function (req, res) {
     
-    var data  =  req.body;    
-    
+    var data  =  req.body;
     var dados = {
         name : data.name,
         email: data.email,
@@ -46,7 +45,7 @@ exports.create =  function (req, res) {
     }
     
     var user  =  new User(dados);
-    
+    console.log(user);    
     user.save(function (err, data) {
         if (err) {
             console.log(err);
@@ -60,13 +59,14 @@ exports.create =  function (req, res) {
 exports.update =  function (req, res) {
     
     var id = req.params.id;
-    var data  =  req.body; 
+    var data  =  req.body;    
     
     User.update({_id: id}, data, function (err, data) {
         if (err) {
             console.log(err);
             res.json(err);
         } else {
+            console.log(data);
             res.json(data);
         }
     });

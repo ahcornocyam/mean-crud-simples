@@ -1,0 +1,9 @@
+div(class="form-group label-floating")
+    label(class="control-label" , for="nome") Nome
+    input(type="text", name="name", value="{{usuario.name}}", ng-model="usuario.name", class="form-control")
+div(class="form-group label-floating")
+    label(class="control-label", for="email") Email
+    input(type="email", name="email", value="{{usuario.email}}", ng-model="usuario.email",class="form-control")
+div(class="form-group label-floating")
+    label(class="control-label", for="password") Senha
+    input(type="password", name="password", value="{{usuario.password}}", ng-model="usuario.password", class="form-control")

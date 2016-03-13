@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 app.get('/angular/:diretorio/:nome', routes.angular);
-//api ofr Userrs
+//api of Users
 app.get('/api/users', users.list);
 app.get('/api/users/:id', users.get);
 app.post('/api/users', users.create);

@@ -1,5 +1,6 @@
 extends layout
-
+block title
+    title= title
 block content
-  h1= title
-  p Welcome to #{title}
+    div(ng-controller="UsersCtrl" class="container-fluid")
+        div(ng-view)   

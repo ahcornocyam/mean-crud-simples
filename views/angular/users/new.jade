@@ -1,0 +1,13 @@
+div(class="panel panel-primary")
+    div(class="panel-heading")
+        h2(class="text-right") Editando  
+            span(ng-bind="usuario.name")
+    div(class="panel-body")
+        form
+        include ./form.jade
+    
+        button(ng-click="add(usuario)", class="btn btn-raised btn-success")
+            i(class="material-icons") save    
+        a(href="#/", ng-click="limpaUsuario", title="voltar", class="btn btn-raised btn-danger")
+            i(class="material-icons") clear                
+        
