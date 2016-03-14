@@ -13,6 +13,6 @@ app.config(
                            templateUrl:'angular/users/new'
                        });
         //usando modo html5
-        //$locationProvider.html5Mode(true);        
+        $locationProvider.html5Mode(true);        
     }]
 );

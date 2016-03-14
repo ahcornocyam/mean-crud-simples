@@ -1,9 +1,9 @@
-div(class="fundo")
+div(class="fundo box-shadow")
 div(class="row")
     div(class="col-md-offset-2 col-md-8")                
         main( ng-init="load()", class="panel panel-default")
             header(class="panel panel-warning")
-                div(class="panel-heading")
+                div(class="panel-heading box-shadow")
                     h1(class="text-center") Listagem de Usuários           
             table( width="100%", class="table table-hover" ng-show="registros.length > 0")
                 thead
@@ -14,17 +14,17 @@ div(class="row")
                 tbody
                     tr(ng-repeat="registro in registros")            
                         td 
-                            a(href="#/edit/{{registro._id}}") 
+                            a(href="/edit/{{registro._id}}") 
                                 {{ registro.name}}
                         td {{ registro.email}}
-                        td(class="text-right")
+                        td(class="text-left")
                             a(ng-click="delete(registro._id); load()", class="remove btn btn-raised btn-warning")
                                 i(class="material-icons") remove                                   
                 tfoot
                     tr
                         td(colspan="3", class="text-center") foram encontrados {{ registros.length }} usuários
             div(class="text-right")
-                a(href="#/new", class="btn btn-fab btn-success")
+                a(href="/new", class="add-button box-shadow btn btn-fab btn-success", title="Adicionar")
                     i(class="material-icons") add
                     
 footer(class="panel panel-primary")
